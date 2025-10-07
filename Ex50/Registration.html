@@ -1,0 +1,148 @@
+<html>
+<head>
+    <title>Ex50 - Nguyen Thanh Thanh</title>
+</head>
+<body style="background-color:rgb(137, 202, 237)">
+    <form name="DeLong Enterprises">
+        <header align="center">
+            <img src="ex50/DeLong.jpg"/>
+        </header>
+        <h2>Travel Expense Report</h2>
+        <hr style="color:rgb(79, 16, 16)"/>
+        <table>
+            <tr>
+                <td>1) First Name:</td>
+                <td>
+                    <input type="text" name="firstname"/>
+                    Last Name: 
+                    <input type="text" name="lastname"/>
+                </td>
+            </tr>
+            <tr>
+                <td>2) Social Security Number:</td>
+                <td>
+                    <input type="number" name="SocialSercurityNumber"/>
+                </td>
+            </tr>
+            <tr>
+                <td>3) Department:</td>
+                <td>
+                    <select>
+                        <option value="1">Accounting</option>
+                        <option value="2">Director</option>
+                        <option value="3">Businessman</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>4) Describe the purpose of your trip:</td>
+            </tr>
+            <tr>
+                <td colspan="100">
+                    <textarea name="descriptionPurpose"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td>5) Itemize your travel expenses</td>
+                <table border="1">
+                    <tr>
+                        <th>Date</th>
+                        <th>Description</th>
+                        <th>Category</th>
+                        <th>Amount</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="date" name="DateOfTravel"/>
+                        </td>
+                        <td>
+                            <input type="text" name="description"/>
+                        </td>
+                        <td>
+                            <select>
+                                <option value="1">Meal</option>
+                                <option value="2">Sightseeing</option>
+                                <option value="3">Sleeping</option>
+                                <option value="4">Teambuilding</option>
+                            </select>
+                        </td>
+                        <td>
+                            <input type="text" name="Amount"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="date" name="DateOfTravel"/>
+                        </td>
+                        <td>
+                            <input type="text" name="description"/>
+                        </td>
+                        <td>
+                            <select>
+                                <option value="1">Meal</option>
+                                <option value="2">Sightseeing</option>
+                                <option value="3">Sleeping</option>
+                                <option value="4">Teambuilding</option>
+                            </select>
+                        </td>
+                        <td>
+                            <input type="text" name="Amount"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="date" name="DateOfTravel"/>
+                        </td>
+                        <td>
+                            <input type="text" name="description"/>
+                        </td>
+                        <td>
+                            <select>
+                                <option value="1">Meal</option>
+                                <option value="2">Sightseeing</option>
+                                <option value="3">Sleeping</option>
+                                <option value="4">Teambuilding</option>
+                            </select>
+                        </td>
+                        <td>
+                            <input type="text" name="Amount"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="date" name="DateOfTravel"/>
+                        </td>
+                        <td>
+                            <input type="text" name="description"/>
+                        </td>
+                        <td>
+                            <select>
+                                <option value="1">Meal</option>
+                                <option value="2">Sightseeing</option>
+                                <option value="3">Sleeping</option>
+                                <option value="4">Teambuilding</option>
+                            </select>
+                        </td>
+                        <td>
+                            <input type="text" name="Amount"/>
+                        </td>
+                    </tr>
+                </table>
+            </tr>
+            <tr>
+                <td>6) Have you submitted your receipts?
+                    <input type="radio" name="answer1" id="a1"/>
+                    <label for="a1">Yes</label>
+                    <input type="radio" name="answer2" id="a2"/>
+                    <label for="a2">No</label>
+                </td>
+            </tr>
+        </table>
+            <p>
+                <input type="button" value="Submit travel expenses" onclick="alert('Alert for submit')"/>
+                <input type="reset" value="Reset"/>
+            </p>
+            <p> Questions? Contact Debbie Larson in Accounting (ext. 2150).</p>
+    </form>
+</body>
+</html>
