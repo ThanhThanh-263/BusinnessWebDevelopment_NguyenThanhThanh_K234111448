@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Page Title</title>
+    <script>
+        function show_image()
+        {
+            //step1: Get image object by conkhi_avatar id
+            img=document.getElementById("conkhi_avatar")
+            //step2: set style attribute for show image
+            img.setAttribute("style", "display:block")
+        }
+        function hide_image()
+        {
+            //step1: Get image object by conkhi_avatar id
+            img=document.getElementById("conkhi_avatar")
+            //step2: set style attribute for show image
+            img.setAttribute("style", "display:None")
+        }
+    </script>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+    <form name="myform">
+            <input type="radio" name="myiamge" id="img1" onchange ="show_image()" />
+            <label for = "img1">Show image</label>
+            <br/>
+            <input type="radio" name="myimage" id="img2" onchange="hide_image()" />
+            <label for ="img2">Hide Image</label>
+            <br/>
+            <img src="../learn_css/conkhi.jpg" id="conkhi_avatar" name="conkhi_avatar"/>
+    </form>
+    
+</body>
+</html>
