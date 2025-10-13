@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Result - Nguyễn Thanh Thanh</title>
+    <link rel='stylesheet' href="../Ex53/mainstyle.css">
+    <style>
+        .result{
+            width:600px;
+            margin: 20px auto;
+            background-color: rgb(255, 255, 255);
+            padding: 20px;
+            border-radius: 10px;
+
+        }
+        p{
+            margin: 10px 0;
+            padding: 10px;
+        }
+        strong{
+            color:rgb(137, 220, 255);
+        }
+    </style>
+</head>
+<body>
+    <h1 align="center">Result</h1>
+    <div class="result">
+    <script>
+        const params= new URLSearchParams(window.location.search);
+        document.write("<p><strong>C112-Mouse:</strong>"+ params.get("i1")+"</p>");
+        document.write("<p><strong>B124-Keyboard US:</strong>"+ params.get("i2")+"</p>");
+        document.write("<p><strong>U125 USB KingMax:</strong>"+ params.get("i3")+"</p>");
+        document.write("<p><strong>Total:</strong>"+ params.get("total")+"</p>");
+    </script>
+    </div>
+    
+</body>
+</html>

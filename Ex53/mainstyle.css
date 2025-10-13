@@ -1,0 +1,47 @@
+body{
+    background-color: rgb(173, 225, 255);
+}
+.container{
+    width:700px;
+    margin: 40px auto;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: white;
+table{
+    width: 100%;
+}
+
+}
+tr, td{
+    padding:10px 15px;
+    text-align: center;
+}
+tr:last-of-type td {
+    border-top: 1px solid #ccc;
+}
+
+
+form{
+    display: flex;
+	flex-direction:column;
+	gap: 1px;
+}
+
+button{
+background-color: rgb(58, 160, 255);
+    width:100px;
+    color:white;
+    border: white;
+    margin-top: 10px;
+    padding:5px;
+    border-radius: 10px;
+    display:block;
+    margin:10px auto; 
+
+}
+
+button:hover{
+    background-color: navy;
+}
+
+

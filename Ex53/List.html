@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ex53 - Nguyễn Thanh Thanh</title>
+    <link rel="stylesheet" href="../Ex53/mainstyle.css"/>
+    <script>
+        function update_result()
+        {
+            const price1=19.95;
+            const price2=29.95;
+            const price3=39.95;
+
+            
+            const qty1=Number(document.getElementById("qty1").value);
+            const qty2=Number(document.getElementById("qty2").value);
+            const qty3=Number(document.getElementById("qty3").value);
+
+            const i1=qty1*price1;
+            const i2=qty2*price2;
+            const i3=qty3*price3;
+
+            document.getElementById("i1").value=i1>0 ? i1.toFixed(2)+"$":"";
+            document.getElementById("i2").value=i2>0 ? i2.toFixed(2)+"$":"";
+            document.getElementById("i3").value=i3>0 ? i3.toFixed(2)+"$":"";
+
+            const total=i1 + i2 + i3;
+            document.getElementById("total").value=total>0 ? total.toFixed(2)+"$":"";
+            
+         }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <form action="../Ex53/result.html" method="get">
+            <table border="0">
+                <tr>
+                    <th>Part Number</th>
+                    <th>Description</th>
+                    <th>Price</th>
+                    <th>Qty</th>
+                    <th>Item table</th>
+                </tr>
+                <tr>
+                    <td>C1112</td>
+                    <td>Mouse</td>
+                    <td>19.95$</td>
+                    <td>
+                        <input type="text" name="qty1" id="qty1" min="0" oninput="update_result()" />
+                    </td>
+                    <td>
+                        <input type="text" id="i1" name="i1" readonly/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>B124</td>
+                    <td>Keyboard US</td>
+                    <td>29.95$</td>
+                    <td>
+                        <input type="text" name="qty2" id="qty2" min="0" oninput="update_result()" />
+                    </td>
+                    <td>
+                        <input type="text" id="i2" name="i2" readonly/>
+                    </td>
+
+                </tr>
+                <tr>
+                    <td>U125</td>
+                    <td>USB KingMax</td>
+                    <td>39.95$</td>
+                    <td>
+                        <input type="text" name="qty3" id="qty3" min="0" oninput="update_result()" />
+                    </td>
+                    <td>
+                        <input type="text" id="i3" name="i3" readonly/>
+                    </td>
+                </tr>
+                <hr/>
+                <tr>
+                    <td colspan="4" align="right">Total:</td>
+                    <td>
+                        <input type="text" name="total" id="total"/>
+                    </td>
+                </tr>
+            </table>
+            <div class="button">
+            <button type="submit" class="sum">Sum</button>
+            </div>
+        </form>
+    </div>
+    
+</body>
+</html>
