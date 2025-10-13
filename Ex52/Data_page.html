@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Data - Nguyễn Thanh Thanh</title>
+    <link rel='stylesheet' href="../Ex52/contact.css">
+    <style>
+        .result{
+            width:600px;
+            margin: 20px auto;
+            background-color: rgb(255, 255, 255);
+            padding: 20px;
+            border-radius: 10px;
+
+        }
+        p{
+            margin: 10px 0;
+            padding: 10px;
+        }
+        strong{
+            color:rgb(255, 83, 140);
+        }
+    </style>
+</head>
+<body>
+    <h1>Submitted Information</h1>
+    <div class="result">
+    <script>
+        const params= new URLSearchParams(window.location.search);
+        document.write("<p><strong>Full name:</strong>"+ params.get("fullname")+"</p>");
+        document.write("<p><strong>Email:</strong>"+ params.get("email")+"</p>");
+        document.write("<p><strong>Send to:</strong>"+ params.get("sendto")+"</p>");
+        document.write("<p><strong>Title:</strong>"+ params.get("title")+"</p>");
+        document.write("<p><strong>Content:</strong>"+ params.get("content")+"</p>");
+    </script>
+    </div>
+    
+</body>
+</html>

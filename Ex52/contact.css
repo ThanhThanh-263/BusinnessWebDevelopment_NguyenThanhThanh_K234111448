@@ -1,0 +1,68 @@
+body{
+    background-color: rgb(228, 255, 212);
+}
+.container{
+    width: 400px;
+    margin: 40px auto;
+    padding: 50px;
+    background-color: white;
+    font-family: 'Times New Roman', Times, serif;
+    border-radius: 10px;
+
+
+}
+h1{
+    color:rgb(253, 74, 155);
+    text-align: center;
+    
+}
+
+    
+form {
+	display: flex;
+	flex-direction:column;
+	gap: 10px;
+    
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+	width: 100%;
+	padding: 8px;
+	border: 1px solid #999;
+	border-radius: 3px;
+	font-size: 14px;
+    font-family:'Times New Roman', Times, serif;
+}
+
+.row {
+	display: flex;
+	justify-content:space-between;
+	gap: 30px;
+}
+
+.column {
+	flex: 1;
+}
+
+textarea{
+    height: 150px;
+}
+
+.button{
+    background-color: rgb(252, 84, 160);
+    width:100px;
+    color:white;
+    border: white;
+    margin-top: 10px;
+    padding:5px;
+    border-radius: 10px;
+    display:block;
+    margin:10px auto;
+    
+}
+.button:hover{
+    background-color: rgb(151, 51, 94);
+}

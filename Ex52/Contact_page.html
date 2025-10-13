@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact Page - Nguyễn Thanh Thanh</title>
+    <link rel="stylesheet" href="../Ex52/contact.css">
+</head>
+<body>
+    <div class="container">
+    <h1>Contact the editorial office</h1>
+    <form action="../Ex52/Data_page.html" method="get">
+        <label for="Full name">Full Name</label>
+        <input type="text" id="fullname" name="fullname"/>
+            <div class="row">
+                <div class="column">
+                <label for="email">Email</label>
+                <input type="text" id="email" name="email"/>
+                </div>
+                <div class="columnn">
+                <label for="sendto">Send to</label>
+                    <select name="sendto" id="sendto">
+                        <option>Editorial board</option>
+                        <option>News Department</option>
+                        <option>Board of Perspectives</option>
+                        <option>World Board</option>
+                        <option>Business Department</option>
+                    </select>
+                </div>
+            </div>
+        <label for="title">Title</label>
+        <input type="text" id="title" name="title"/>
+        <label for="content">Content</label>
+        <textarea id="content" name="content"></textarea>
+        <button type="submit" class="button">Send</button>
+
+    </form>
+    </div>
+</body>
+</html>
