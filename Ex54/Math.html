@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ex54- Nguyễn Thanh Thanh</title>
+    <script type="text/javascript">
+        function calcMax()
+        {
+          a=parseFloat(document.getElementById("input_a").value);
+          b=parseFloat(document.getElementById("input_b").value);
+          c=parseFloat(document.getElementById("input_c").value);
+          let maxvalue= Math.max(a,b,c);
+
+          document.getElementById("result").value=maxvalue;
+          
+        }
+
+        function calcMin()
+        {
+          a=parseFloat(document.getElementById("input_a").value);
+          b=parseFloat(document.getElementById("input_b").value);
+          c=parseFloat(document.getElementById("input_c").value);
+          let minvalue= Math.min(a,b,c);
+
+          document.getElementById("result").value=minvalue;
+        }
+
+        function calcSin(a)
+        {
+          a=parseFloat(document.getElementById("input_a").value);
+          radian= a*(Math.PI/180)
+          let sin_a_value= Math.sin(radian);
+
+          document.getElementById("result").value=sin_a_value;
+        }
+
+        function calcCos(a)
+        {
+          a=parseFloat(document.getElementById("input_a").value);
+          radian= a*(Math.PI/180)
+          let sin_a_value= Math.cos(radian);
+
+          document.getElementById("result").value=sin_a_value;
+        }
+
+        function calca_sup_b(a,b)
+        {
+          a=parseFloat(document.getElementById("input_a").value);
+          b=parseFloat(document.getElementById("input_b").value);
+          let pow_value=Math.pow(a,b);
+
+          document.getElementById("result").value=pow_value;
+        }
+    </script>
+    
+</head>
+<body>
+    <form name="my_form">
+        <fieldset>
+            <legend>Math Function:</legend>
+            <table border="1">
+                <tr>
+                    <td width="150" align="center">a:</td>
+                    <td>
+                        <input type="text" name="input_a" id="input_a"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="150" align="center">b:</td>
+                    <td>
+                        <input type="text" name="input_b" id="input_b"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="150" align="center">c:</td>
+                    <td>
+                        <input type="text" name="input_c" id="input_c"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="150" align="center">Result:</td>
+                    <td>
+                        <input type="text" name="result" id="result"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                            <button type="button" onclick="calcMax()">MAX</button>
+                            <button type="button" onclick="calcMin()">MIN</button>
+                            <button type="button" onclick="calcSin()">SIN(a)</button>
+                            <button type="button" onclick="calcCos()">COS(a)</button>
+                            <button type="button" onclick="calca_sup_b()">a^b</button>
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+    </form>
+</body>
+</html>
