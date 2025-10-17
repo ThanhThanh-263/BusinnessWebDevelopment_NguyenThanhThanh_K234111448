@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login system - Nguyen Thanh Thanh</title>
+    <script>
+        accounts=[
+            {"user":"admin",
+                "password":"123"
+            },
+            {"user":"employee",
+                "password":"456"
+
+            },
+        ]
+    </script>
+    <script type="text/javascript">
+        function process_login()
+        {
+            uid=my_form.user_name.value
+            pwd=my_form.password.value
+            login_ac=null
+            for (i=0;i<accounts.length;i++)
+            {
+                ac=accounts[i]
+                if(ac.user==uid && ac.password==pwd)
+                {
+                    //login thanh cong
+                    login_ac=ac
+                    break
+                }
+            }
+            if (login_ac==null)
+            {
+                alert("login failed, please contact to admin")
+            }
+            else 
+            {
+                window.location="xml_ajax.html"
+            }
+        }
+
+    </script>
+</head>
+<body>
+    <form name="my_form">
+        <fieldset>
+            <legend>Login ABC system:</legend>
+            <table>
+                <tr>
+                    <td rowspan="6">
+                        <img src="../learn_xml_dom_ajax/images/ic_admin.png"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>User:</td>
+                    <td>
+                        <input type="text" name="user_name" id="user_name" width="200" height="120"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Password:</td>
+                    <td>
+                        <input type="password" name="password" id="password" width="200" height="120"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" name="save_infor" id="save_infor"/>
+                        <label for="save_infor">Save information</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button type="button">Login</button>
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+    </form>
+    
+</body>
+</html>
