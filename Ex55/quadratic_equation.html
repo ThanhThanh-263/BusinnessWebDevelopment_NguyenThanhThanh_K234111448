@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ex55- Nguyễn Thanh Thanh</title>
+    <style>
+        body{
+            background-color: rgb(218, 232, 218);
+            display: flex
+        
+
+        }
+
+        button{
+            border-radius: 5px;
+            border-color: rgb(223, 182, 20);
+        }
+        .container{
+            width: 600px;
+            margin: 100px auto;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: white;
+            justify-content: center;
+            align-items: center;
+        }
+
+        table{
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        td{
+            padding: 5px 8px;
+        }
+
+        input[type="text"] {
+            width: 95%;                     
+        }
+               
+    </style>
+    <script type="text/javascript">
+        function calcSolution()
+        {
+        a=parseFloat(document.getElementById("input_a").value);
+        b=parseFloat(document.getElementById("input_b").value);
+        c=parseFloat(document.getElementById("input_c").value);
+        solution=document.getElementById("solution");
+
+          if(!isNaN(a) && !isNaN(b) &&!isNaN(c))
+          {
+            solution.value="Please enter all values!"
+          }
+          if(a==0){
+            if(b==0){
+                solution.value=(c==0)? "Infinite solutions": "No solution";
+            }
+            else {
+                let x= -c/b;
+                solution.value="x="+x.toFixed(2);
+            }
+            return;
+          }
+          let delta= b*b - 4 * a * c;
+          if (delta<0){
+            solution.value="No solution";
+          }
+          else if (delta==0){
+            let x=  -b / (2 * a);
+            solution.value = "x = " + x.toFixed(2);
+
+          }
+          else{
+            let x1= (-b + Math.sqrt(delta)) / (2 * a);
+            let x2=(-b - Math.sqrt(delta)) / (2 * a);
+            solution.value = "x1 = " + x1.toFixed(2) + ", x2 = " + x2.toFixed(2);
+          }             
+        }
+    </script>
+    
+</head>
+<body>
+    <div class="container">
+    <form name="my_form">
+        <table border="1">
+            <tr>
+                <td colspan="2" align="center" style="background-color: rgb(187, 226, 193);">The quadratic equation</td>
+            </tr>
+            <tr>
+                <td>a:</td>
+                <td>
+                    <input type="text" name="input_a" id="input_a"/>
+                </td>
+            </tr>
+            <tr>
+                <td>b:</td>
+                <td>
+                    <input type="text" name="input_b" id="input_b"/>
+                </td>
+            </tr>
+            <tr>
+                <td>c:</td>
+                <td>
+                    <input type="text" name="input_c" id="input_c"/>
+                </td>
+            </tr>
+            <tr>
+                <td>Solution:</td>
+                <td>
+                    <input type="text" name="solution" id="solution"/>
+                </td>
+            </tr>
+            <tr>
+                 <td></td>
+                <td>
+                        <button type="button" onclick="calcSolution()">Find Solution</button>
+                        <button type="reset">Clear</button>
+                </td>
+            </tr>
+    </form>
+    </div>
+</body>
+</html>
