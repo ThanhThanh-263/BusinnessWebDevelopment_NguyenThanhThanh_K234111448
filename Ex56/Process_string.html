@@ -1,0 +1,77 @@
+<html>
+<head>
+    <title>Ex56 - Nguyễn Thanh Thanh</title>
+    <script src="../Ex56/Process_string.js"></script>
+    <style>
+        table {
+            border-collapse: collapse;
+            border: 2px solid #ccc;
+            margin: 10px auto;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        td {
+            border: none;
+            padding: 8px 12px;
+        }
+        textarea {
+            width: 250px;
+            height: 80px;
+        }
+        button {
+            width: 90%;
+            margin: 5px;
+            padding: 8px;
+            border: 1px solid #888;
+            border-radius: 6px;
+            background-color: #f8f8f8;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        button:hover {
+            background-color: #e9e9e9;
+        }
+        th {
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <th align="left" colspan="2">Using String Processing functions</th>
+        </tr>
+        <tr>
+            <td>
+                <b>Input Data:</b><br>
+                <textarea id="inputText"></textarea>
+            </td>
+            <td>
+                <b>Result:</b><br>
+                <textarea id="resultText" readonly></textarea>
+            </td>
+        </tr>
+        <tr>
+            <td><button onclick="enterData()">Enter Data</button></td>
+            <td><button onclick="countUppercase()">Count the number of uppercase characters</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="showUppercase()">Uppercase display</button></td>
+            <td><button onclick="outputOneWordPerLine()">Output one word per line</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="showLowercase()">Lowercase display</button></td>
+            <td><button onclick="wordCount()">Word count</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="countLowercase()">Count the number of lowercase characters</button></td>
+            <td><button onclick="printVowelsConsonants()">Print vowels, consonants</button></td>
+        </tr>
+        <tr>
+            <td colspan="2" style="background-color:rgb(248, 198, 255);">
+                W3C’s String Processing Website
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
