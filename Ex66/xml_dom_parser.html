@@ -1,0 +1,78 @@
+<html>
+    <head>
+        <title>Ex66 - Nguyễn Thanh Thanh</title>
+        <style>
+            table {
+            border-collapse: collapse;
+            margin: 20px auto;
+            width: 400px;
+            text-align: left;
+            font-family: Arial, sans-serif;
+            }
+            th {
+            background-color: #cf9ae9;
+            text-align: center;
+            font-size: 20px;
+            padding: 8px;
+            border: 1px solid #aaa;
+            }
+            td {
+            border: 1px solid #aaa;
+            padding: 8px;
+            }
+        </style>
+    </head>
+    <body>
+        <table id="studentTable">
+            <tr>
+                <th colspan="2">Student Information</th>
+            </tr>
+            <tr>
+                <td>Student ID:</td>
+                <td id="td_id"></td>
+            </tr>
+            <tr>
+                <td>Student Name:</td>
+                <td id="td_name"></td>
+            </tr>
+            <tr>
+                <td>Birthday:</td>
+                <td id="td_birthday"></td>
+            </tr>
+            <tr>
+                <td>Gender:</td>
+                <td id="td_gender"></td>
+            </tr>
+        </table>
+        <script>
+            function loadXMLData() 
+            {
+            const xmlString = `
+                <student>
+                <id>987456</id>
+                <name>Marie Curie</name>
+                <birthday>7/11/1867</birthday>
+                <gender>Woman</gender>
+                </student>`;
+            const parser = new DOMParser();
+            const xmlDoc = parser.parseFromString(xmlString, "text/xml");
+            document.getElementById("td_id").innerText = xmlDoc.getElementsByTagName("id")[0].textContent;
+            document.getElementById("td_name").innerText = xmlDoc.getElementsByTagName("name")[0].textContent;
+            document.getElementById("td_birthday").innerText = xmlDoc.getElementsByTagName("birthday")[0].textContent;
+            document.getElementById("td_gender").innerText = xmlDoc.getElementsByTagName("gender")[0].textContent;
+            const rows = document.querySelectorAll("#studentTable tr");
+            rows.forEach(row => {
+                row.addEventListener("mouseover", () => {
+                row.style.backgroundColor = "blue";
+                row.style.color = "white";
+                });
+                row.addEventListener("mouseout", () => {
+                row.style.backgroundColor = "";
+                row.style.color = "";
+                });
+            });
+            }
+            window.onload = loadXMLData;
+        </script>
+    </body>
+</html>
