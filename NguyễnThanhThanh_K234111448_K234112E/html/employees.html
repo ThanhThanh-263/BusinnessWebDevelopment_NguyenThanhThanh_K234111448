@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='../css/mainstyle.css'>
+    <script src='../js/main.js'></script>
+</head>
+<body>
+    <!-- html/employees.html -->
+<div class="employees-container">
+  <h2 class="section-title">👥 Employee Management</h2>
+
+  <div class="form-container">
+    <h3>Thêm Nhân Viên Mới</h3>
+    <form id="employeeForm" onsubmit="addEmployee(event)">
+      <div class="form-group"><label>ID:</label><input type="text" id="empId" required></div>
+      <div class="form-group"><label>Name:</label><input type="text" id="empName" required></div>
+      <div class="form-group"><label>Phone:</label><input type="tel" id="empPhone" required></div>
+      <div class="form-group"><label>Email:</label><input type="email" id="empEmail" required></div>
+      <div class="form-group"><label>Age:</label><input type="number" id="empAge" required min="1" max="120"></div>
+      <button type="submit" class="btn">Add Employee</button>
+    </form>
+  </div>
+
+  <div id="employeesTable" style="margin-top: 20px;">
+    <p class="loading">Chưa có nhân viên nào.</p>
+  </div>
+</div>
+
+</body>
+</html>

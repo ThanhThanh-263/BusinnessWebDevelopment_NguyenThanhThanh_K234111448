@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Kiwi Company Website</title>
+  <link rel="stylesheet" href="../css/mainstyle.css">
+  <script defer src="../js/main.js"></script>
+</head>
+<body>
+  <div id="container">
+
+    <!-- A: Menu -->
+    <div id="A">
+      <!-- Menu chính -->
+      <div id="mainMenu">
+        <button class="menu-btn" data-action="about">About me</button>
+        <button class="menu-btn" data-menu="formMenu">Form & Javascript</button>
+        <button class="menu-btn" data-menu="apiMenu">API and External</button>
+        <button class="menu-btn" data-page="login.html">Login/Logout</button>
+      </div>
+
+      <!-- Menu con -->
+      <div id="subMenu">
+        <div id="formMenu" class="submenu">
+          <button class="sub-btn" data-page="products.html">Products</button>
+          <button class="sub-btn" data-page="employees.html">Employees</button>
+        </div>
+
+        <div id="apiMenu" class="submenu">
+          <button class="sub-btn" data-page="weather.html">Weather API</button>
+          <button class="sub-btn" data-page="rss.html">RSS</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- B, C, D, E -->
+    <div id="contentRow">
+      <div id="B">B</div>
+      <div id="C">Loading...</div>
+      <div id="D">D</div>
+    </div>
+
+    <div id="E">E (Footer)</div>
+  </div>
+</body>
+</html>
